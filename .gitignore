@@ -1,3 +1,5 @@
 env.list
 target
 make.sh
+/.lein-failures
+/.nrepl-port

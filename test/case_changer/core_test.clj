@@ -3,5 +3,8 @@
             [case-changer.core :refer :all]))
 
 
-(deftest sanity
-  (is true))
+(deftest test-say-hi
+  (are [exp name] (= exp (say-hi name))
+    nil "dogman"
+    "Hi, tracy!" "tracy"
+    "Hi, brah!" nil))
