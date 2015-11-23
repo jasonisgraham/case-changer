@@ -10,7 +10,9 @@
       (str "Hi, " name "!"))))
 
 (defroutes app-routes
-  (GET "/:name" [name] (say-hi name))
+  (GET "/say-hi/:name" [name] (say-hi name))
+  (GET "/do-env-vars-work" []
+       (str "ENV_VAR_TEST : " (System/getenv "ENV_VAR_TEST")))
 
   (GET "/" [] (say-hi nil))
 
